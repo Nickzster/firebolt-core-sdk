@@ -795,6 +795,41 @@
                 "query": {
                   "type": "string"
                 },
+                "filters": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "programType": {
+                        "$ref": "https://meta.comcast.com/firebolt/entertainment#/definitions/ProgramType"
+                      },
+                      "offeringType": {
+                        "$ref": "https://meta.comcast.com/firebolt/entertainment#/definitions/OfferingType"
+                      }
+                    }
+                  },
+                  "minItems": 1,
+                  "maxItems": 100
+                },
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "keyword": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "appId": {
+                        "$ref": "#/definitions/Identifier"
+                      }
+                    }
+                  },
+                  "minItems": 1,
+                  "maxItems": 100
+                },
                 "menus": {
                   "type": "array",
                   "items": {
